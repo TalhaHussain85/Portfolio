@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Umma Hani Services Pvt Ltd - Leading Web Designing in Rawalpindi</title>
+    <link rel="shourt icon" type="icon"
+        href="https://www.sgstechnologies.net/sites/default/files/2021-08/future-webdesign.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Tahoma, Verdana, sans-serif;
+        }
+
+        body {
+            padding-top: 70px;
+            overflow-y: auto;
+            background-color: LightGray;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: all 1s ease;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(207, 203, 203);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 60px;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #0084d9;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0084d9;
+            font-size: large;
+            transition: color 0.3s ease;
+        }
+
+
+        .body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        .img img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .me {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .me h1 {
+            font-size: 32px;
+            color: #0084d9;
+            margin-bottom: 10px;
+        }
+
+        .me1 {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Images Group */
+        .imges-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .imges-group img {
+            width: 60%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* 2 Columns: Left & Right */
+            gap: 20px;
+            background-color: #0084d9;
+            padding: 20px;
+            border-radius: 15px 20px 0 0;
+            color: white;
+        }
+
+        /* Left Section */
+        .left {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .left a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .left img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .left-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .left-title {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+
+        .left-subtitle {
+            font-size: 12px;
+            color: white;
+        }
+
+        .paragraph5 {
+            max-width: 90%;
+            text-align: left;
+        }
+
+        .link {
+            display: flex;
+            gap: 15px;
+        }
+
+        .link a {
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Right Section */
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .right h1 {
+            margin-bottom: 10px;
+        }
+
+        .right h2,
+        .right p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .p1,
+        .p2,
+        .p3 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="./Hani.html" class="logo">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg"
+                alt="Umma Hani">
+            <div class="logo-text">
+                <span class="logo-title">Umma Hani</span>
+                <span class="logo-subtitle">Services Pvt.Ltd</span>
+            </div>
+        </a>
+        <ul>
+            <li><a href="./services.html"><strong>Services</strong></a></li>
+            <li><a href="./portfolio.html"><strong>Portfolio</strong></a></li>
+            <li><a href="https://forms.gle/eo6hkMbypC4fyNSz8"><strong>Contact Form</strong></a></li>
+        </ul>
+    </nav>
+
+    <div class="body">
+        <div class="img">
+            <img src="./My Img.jpg" alt="My Picture">
+        </div>
+        <div class="me">
+            <h1>About Me</h1>
+            <p class="me1">
+                👋 Hello!
+                My name is <strong>Talha Hussain</strong>, and I am a passionate Web Developer. I love designing modern
+                and
+                responsive websites using **HTML, CSS, and JavaScript**.
+                <br><br>
+                💡 **My Skills:**
+                ✅ **HTML5** – Experience in writing semantic and SEO-friendly markup.
+                ✅ **CSS3** – Skilled in modern styling techniques like Flexbox, Grid, and Animations.
+                ✅ **JavaScript (ES6+)** – Capable of creating interactive and dynamic web pages.
+                <br><br>
+                💻 **My Expertise:**
+                - Responsive Web Design (Mobile-friendly layouts)
+                - Front-End Development (User-friendly UI/UX)
+                - Interactive Web Components (Adding animations and interactivity using JavaScript)
+                <br>
+                I am always eager to learn new technologies and frameworks to enhance my skills. If you need a
+                professional and modern website, feel free to contact me!
+            </p>
+        </div>
+    </div>
+
+    <div class="imges-group">
+        <img class="img1" src="./Capture.PNG" alt="">
+        <img class="img2" src="./Capture1.PNG" alt="">
+        <img class="img3" src="./Capture2.PNG" alt="">
+    </div>
+    <div class="footer">
+        <div class="left">
+            <a href="" class="left">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg"
+                    alt="Umma Hani">
+                <div class="left-text">
+                    <span class="left-title">Umma Hani</span>
+                    <span class="left-subtitle">Services Pvt.Ltd</span>
+                </div>
+            </a>
+            <p class="paragraph5">
+                Umma Hani Services, offering you customized and reliable website designing solutions, is a part of a
+                multi-national group of companies. Based in its operational headquarters in Pakistan, we have been
+                helping businesses in the USA and around the world create stunning, user-friendly, and high-performing
+                websites.
+            </p>
+            <div class="link">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Information</h1>
+            <h2 class="p1">Location:</h2>
+            <p class="p1">A.E.C.H.S Chaklala Sector 4 Block C</p>
+            <h2 class="p2">Tel:</h2>
+            <p class="p2">0314-0716277</p>
+            <h2 class="p3">Email:</h2>
+            <p class="p3">maliktalhahussain0@gmail.com</p>
+        </div>
+    </div>
+    <script>
+        // Header Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const header = document.querySelector("header");
+            setTimeout(() => {
+                header.style.opacity = "1";
+                header.style.transform = "translateY(0)";
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

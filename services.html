@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Umma Hani Services Pvt Ltd - Leading Web Designing in Rawalpindi</title>
+    <link rel="shourt icon" type="icon"
+        href="https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/web-design-header.jpg?itok=4d7TmUMl">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Tahoma, Verdana, sans-serif;
+        }
+
+        .img {
+            background-image: url(https://www.theedigital.com/wp-content/uploads/2021/08/Latest-Web-Design-Trends-and-Standards.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .logo-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #0084d9;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+        }
+
+        /* New CSS for Box Layout */
+        .body {
+            background-color: rgba(194, 192, 189, 0.26);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+            padding: 50px;
+            margin-top: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .class1,
+        .class2,
+        .class3,
+        .class4,
+        .class5 {
+            background-color: rgba(250, 245, 235, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Placing first 3 boxes in first row */
+        .class1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .class2 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .class3 {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        /* Placing last 2 boxes in second row */
+        .class4 {
+            grid-column: 1 / span 2;
+            /* Stretching across 2 columns */
+            grid-row: 2;
+        }
+
+        .class5 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .footer {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* 2 Columns: Left & Right */
+            gap: 20px;
+            background-color: #0084d9;
+            padding: 20px;
+            border-radius: 15px 20px 0 0;
+            color: white;
+        }
+
+        /* Left Section */
+        .left {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .left a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .left img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .left-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .left-title {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+
+        .left-subtitle {
+            font-size: 12px;
+            color: white;
+        }
+
+        .paragraph5 {
+            max-width: 90%;
+            text-align: left;
+        }
+
+        .link {
+            display: flex;
+            gap: 15px;
+        }
+
+        .link a {
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Right Section */
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .right h1 {
+            margin-bottom: 10px;
+        }
+
+        .right h2,
+        .right p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .p1,
+        .p2,
+        .p3 {
+            font-weight: bold;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            display: none;
+            background-color: #BBC5C9;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #backToTop:hover {
+            background-color: #005f9e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img"></div>
+
+    <header>
+        <nav>
+            <button id="backToTop" onclick="scrollToTop()">↑</button>
+            <a href="./Hani.html" class="logo">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg"
+                    alt="Umma Hani">
+                <div class="logo-text">
+                    <span class="logo-title">Umma Hani</span>
+                    <span class="logo-subtitle">Services Pvt.Ltd</span>
+                </div>
+            </a>
+            <ul>
+                <li><a href="./services.html"><strong>Services</strong></a></li>
+                <li><a href="./portfolio.html"><strong>Portfolio</strong></a></li>
+                <li><a href="https://forms.gle/eo6hkMbypC4fyNSz8"><strong>Contact Form</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body">
+        <div class="class1">
+            <h1><i class="fa-solid fa-code"></i></h1>
+            <h1>Coding</h1>
+            <p>Coding is the foundation of modern technology, enabling businesses to develop websites, applications, and
+                software solutions.
+                I specialize in writing efficient and scalable code that powers digital experiences.
+                Whether it's a simple website or a complex software system, my coding expertise ensures quality,
+                performance, and innovation.</p>
+        </div>
+        <div class="class2">
+            <h1><i class="fa-brands fa-digital-ocean"></i></h1>
+            <h1>Digital Coding</h1>
+            <p>I stay focused and ensure businesses thrive with cutting-edge Digital Coding solutions.
+                As an adept and innovative coder, I specialize in seamless digital transformation
+                through scalable, secure, and high-performance code that powers websites, applications, and software.
+                My expertise turns ideas into reality with efficient and optimized digital solutions.</p>
+        </div>
+        <div class="class3">
+            <h1><i class="fa-solid fa-file-code"></i></h1>
+            <h1 class="h1">HTML</h1>
+            <h1 class="h2">CSS</h1>
+            <h1 class="h3">JavaScript</h1>
+            <p>I stay focused and ensure businesses thrive with cutting-edge Web Development solutions.
+                Through scalable, secure, and high-performance HTML, CSS, and JavaScript code that powers dynamic
+                websites and
+                interactive web applications.
+                My expertise in front-end technologies allows me to craft visually appealing, responsive, and
+                user-friendly
+                digital experiences,
+                turning creative ideas into reality with efficient and optimized web solutions.</p>
+        </div>
+        <div class="class4">
+            <h1><i class="fa-brands fa-mdb"></i></h1>
+            <h1>BootStrap</h1>
+            <p>I leverage the power of Bootstrap to create responsive, mobile-friendly, and visually stunning web
+                designs.
+                With its flexible grid system, pre-styled components, and powerful JavaScript plugins,
+                I build modern and fully optimized websites that enhance user experience.
+                Bootstrap allows me to streamline development, ensuring fast, scalable, and cross-browser-compatible web
+                solutions.</p>
+        </div>
+        <div class="class5">
+            <h1><i class="fa-brands fa-wordpress"></i></h1>
+            <h1>WordPress</h1>
+            <p>I specialize in WordPress Development, creating dynamic, responsive, and user-friendly websites.
+                With expertise in WordPress themes, plugins, and customization, I build powerful websites
+                that are SEO-friendly, fast, and fully optimized for all devices.
+                Whether it's an eCommerce store, a business website, or a personal blog,
+                I ensure seamless functionality and a stunning design using WordPress.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="left">
+            <a href="" class="left">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Web_Designing.jpg"
+                    alt="Umma Hani">
+                <div class="left-text">
+                    <span class="left-title">Umma Hani</span>
+                    <span class="left-subtitle">Services Pvt.Ltd</span>
+                </div>
+            </a>
+            <p class="paragraph5">
+                Umma Hani Services, offering you customized and reliable website designing solutions, is a part of a
+                multi-national group of companies. Based in its operational headquarters in Pakistan, we have been
+                helping businesses in the USA and around the world create stunning, user-friendly, and high-performing
+                websites.
+            </p>
+            <div class="link">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Information</h1>
+            <h2 class="p1">Location:</h2>
+            <p class="p1">A.E.C.H.S Chaklala Sector 4 Block C</p>
+            <h2 class="p2">Tel:</h2>
+            <p class="p2">0314-0716277</p>
+            <h2 class="p3">Email:</h2>
+            <p class="p3">maliktalhahussain0@gmail.com</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.onscroll = function () { showButton() };
+
+    function showButton() {
+        let btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+
+</html>
